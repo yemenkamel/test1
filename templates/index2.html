@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="{% static "style.css" %}">
+    </head>
+    <body>
+        <div class="bg-red">
+            <h1>hello {{ name }}</h1>
+
+            {% if name == 'yemen' %}
+                <h2>Hello yemen</h2>
+            {% else %}
+                <h2>hello everybody</h2>
+            {% endif %}
+        </div>
+        <ul >
+            {% for student in students %}
+                <li>{{ student }}</li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>
